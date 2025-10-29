@@ -1,0 +1,44 @@
+:root{
+  --bg:#06070b; --panel:#0f1619; --muted:#9aa4ae;
+  --accent:#7b61ff; --accent2:#00d4c7; --glass:rgba(255,255,255,0.03);
+  --radius:12px;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:"Cairo",system-ui,Arial;color:#eaf2f8;background:linear-gradient(180deg,#05060a,#07101a)}
+.app{display:flex;min-height:100vh}
+.sidebar{width:220px;background:linear-gradient(180deg,#071018,#0b1216);padding:18px;border-right:1px solid rgba(255,255,255,0.02)}
+.logo{font-weight:800;color:#021;background:linear-gradient(90deg,var(--accent),var(--accent2));padding:10px;border-radius:10px;text-align:center}
+.sidebar nav{margin-top:18px;display:flex;flex-direction:column;gap:8px}
+.nav-item{background:transparent;border:0;padding:10px;border-radius:8px;color:var(--muted);text-align:right;cursor:pointer}
+.nav-item.active{background:linear-gradient(90deg,rgba(123,97,255,0.12),rgba(0,212,199,0.06));color:#fff}
+.sidebar-footer{margin-top:auto}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid rgba(255,255,255,0.02)}
+.main{flex:1;display:flex;flex-direction:column}
+.cards{display:flex;gap:12px;padding:18px}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:10px;flex:1;border:1px solid rgba(255,255,255,0.02)}
+.card-title{color:var(--muted);font-size:13px}
+.card-value{font-weight:800;font-size:20px;margin-top:6px}
+.trade-panel{display:flex;gap:12px;padding:18px}
+.chart-mock{flex:2;background:#07121a;border-radius:10px;padding:18px;min-height:200px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+.trade-actions{flex:1;display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+select, input, textarea{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:8px;color:inherit}
+.btn{padding:10px 14px;border-radius:10px;border:0;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#021;cursor:pointer}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
+.btn.primary{background:linear-gradient(90deg,#00d4c7,#7b61ff);color:#021}
+.log-area{padding:18px}
+textarea#log{width:100%;min-height:100px;border-radius:8px;padding:10px;background:#05101a;color:var(--muted);border:1px solid rgba(255,255,255,0.02)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;padding:18px}
+.card .small{font-size:13px;color:var(--muted)}
+.hidden{display:none}
+.footer{margin-top:auto;padding:12px 18px;color:var(--muted);text-align:center}
+
+/* modal */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(2,6,12,0.6);z-index:99}
+.modal.hidden{display:none}
+.modal-card{background:linear-gradient(180deg,#0b1115,#071018);padding:16px;border-radius:12px;width:320px;border:1px solid rgba(255,255,255,0.03)}
+.modal-close{position:absolute;right:24px;top:18px;background:transparent;border:0;color:var(--muted);font-size:20px}
+@media (max-width:900px){
+  .sidebar{display:none}
+  .app{flex-direction:column}
+  .trade-panel{flex-direction:column}
+}
