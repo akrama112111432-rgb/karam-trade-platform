@@ -1,0 +1,9 @@
+{
+  "name":"Karam Trade Platform",
+  "short_name":"Karam",
+  "start_url":"/v3/",
+  "display":"standalone",
+  "background_color":"#06070b",
+  "theme_color":"#0b0f14",
+  "icons":[]
+}
