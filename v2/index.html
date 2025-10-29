@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Karam Trade Platform — منصّة كرم للتجارة</title>
+
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#0b0b0d">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">KTP</div>
+      <div class="titles">
+        <div class="title-en">Karam Trade Platform</div>
+        <div class="title-ar">منصّة كرم للتجارة</div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <select id="lang" aria-label="اختيار اللغة">
+        <option value="ar" selected>العربية</option>
+        <option value="en">English</option>
+        <option value="tr">Türkçe</option>
+      </select>
+      <button id="open-sub" class="btn">الاشتراكات</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 class="hero-title">منصة ذكية لتجارتك — أنيقة، آمنة، وسهلة</h1>
+      <p class="hero-desc">بيع وادِر ومنصة دفع مدمجة مع واجهة داكنة حديثة. تجربة مثالية على الجوال.</p>
+
+      <div class="hero-actions">
+        <a class="cta" href="#plans">اطّلع على الاشتراكات</a>
+        <a class="cta ghost" href="#features">المميزات</a>
+      </div>
+    </section>
+
+    <section id="features" class="cards">
+      <article class="card">
+        <h3>تصميم داكن وحديث</h3>
+        <p>ألوان متباينة، خطوط مقروءة، وحركات بسيطة لواجهة متطورة.</p>
+      </article>
+      <article class="card">
+        <h3>متجاوبة للهاتف</h3>
+        <p>تصميم مصغّر وعملي للشاشات الصغيرة مع أزرار كبيرة وسهلة اللمس.</p>
+      </article>
+      <article class="card">
+        <h3>نظام اشتراكات</h3>
+        <p>خطط أسبوعية، شهرية، وسنوية قابلة للتغيير بسلاسة في الواجهة.</p>
+      </article>
+    </section>
+
+    <section id="plans" class="plans">
+      <h2>خطط الاشتراك</h2>
+      <div class="plan-grid">
+        <div class="plan">
+          <h4>أسبوعي</h4>
+          <div class="price">$4<span>/أسبوع</span></div>
+          <ul>
+            <li>لوحة تحكم بسيطة</li>
+            <li>دعم عبر البريد</li>
+          </ul>
+          <button class="btn choose" data-plan="week">اشترك</button>
+        </div>
+
+        <div class="plan popular">
+          <div class="ribbon">الأكثر مبيعًا</div>
+          <h4>شهري</h4>
+          <div class="price">$12<span>/شهر</span></div>
+          <ul>
+            <li>كل ميزات الأسبوعي</li>
+            <li>تقارير أسبوعية</li>
+          </ul>
+          <button class="btn choose" data-plan="month">اشترك</button>
+        </div>
+
+        <div class="plan">
+          <h4>سنوي</h4>
+          <div class="price">$120<span>/سنة</span></div>
+          <ul>
+            <li>تخفيض 20%</li>
+            <li>دعم مميز</li>
+          </ul>
+          <button class="btn choose" data-plan="year">اشترك</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Karam Trade Platform — منصّة كرم للتجارة</p>
+    </footer>
+  </main>
+
+  <!-- Modal بسيط -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button id="close-modal" class="modal-close">×</button>
+      <h3 id="modal-title">اختر خطة</h3>
+      <p id="modal-body">شكرًا لاختيارك! سيتم توجيهك إلى صفحة الدفع لاحقًا (تجريبي).</p>
+      <div class="modal-actions">
+        <button id="confirm" class="btn">تأكيد</button>
+        <button id="cancel" class="btn ghost">إلغاء</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
