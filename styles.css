@@ -1,0 +1,57 @@
+:root{
+  --bg:#06070b;
+  --card:#0f1720;
+  --muted:#9aa4b2;
+  --accent:#6b9cff;
+  --accent-2:#8a6bff;
+  --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Noto Sans Arabic", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,#040507 0%, #061018 60%);
+  color:#e6eef8;
+  min-height:100vh;
+}
+.topbar{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 18px;background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent);
+  border-bottom:1px solid rgba(255,255,255,0.03);
+}
+.brand{display:flex;gap:12px;align-items:center}
+.brand h1{margin:0;font-size:18px}
+.muted{color:var(--muted);font-size:12px}
+.actions{display:flex;gap:8px}
+.container{padding:18px;max-width:1000px;margin:0 auto}
+.hero{padding:20px;background:var(--card);border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.5)}
+.hero h2{margin:0 0 6px 0;font-size:22px}
+.hero p{color:var(--muted);margin:0 0 12px 0}
+.cta .btn{margin-right:8px}
+
+/* Buttons */
+.btn{padding:8px 12px;border-radius:10px;border:0;cursor:pointer;background:transparent;color:inherit}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#021; font-weight:700}
+.btn.ghost{border:1px solid rgba(255,255,255,0.06)}
+.btn.small{padding:6px 10px;font-size:14px}
+
+/* Dashboard */
+.hidden{display:none}
+.dashboard{margin-top:18px}
+.cards{display:flex;gap:12px;flex-wrap:wrap}
+.card{flex:1;min-width:200px;background:var(--glass);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+.card h4{margin:0 0 8px 0}
+.big{font-size:20px;font-weight:700}
+.trade-area{margin-top:14px;display:flex;gap:12px;flex-direction:column}
+textarea#tradeLog{background:#061018;border-radius:8px;border:1px solid rgba(255,255,255,0.03);padding:12px;color:var(--muted);min-height:120px;resize:vertical}
+.trade-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:6px}
+
+/* info + footer */
+.info{margin-top:18px;background:var(--card);padding:14px;border-radius:10px}
+.footer{padding:18px;text-align:center;color:var(--muted);margin-top:22px}
+
+/* responsive */
+@media (max-width:600px){
+  .cards{flex-direction:column}
+  .brand h1{font-size:16px}
+}
