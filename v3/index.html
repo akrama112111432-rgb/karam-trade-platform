@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Karam Trade Platform — v3</title>
+  <meta name="theme-color" content="#0b0f14">
+  <link rel="manifest" href="/v3/manifest.json">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">Karam<span>Pro</span></div>
+      <nav>
+        <button class="nav-item active" data-target="dashboard">لوحة التحكم</button>
+        <button class="nav-item" data-target="videos">فيديوهات</button>
+        <button class="nav-item" data-target="indicators">المؤشرات</button>
+        <button class="nav-item" data-target="account">حسابي</button>
+      </nav>
+      <div class="sidebar-footer">
+        <select id="lang" title="اللغة">
+          <option value="ar">العربية</option>
+          <option value="en">English</option>
+          <option value="tr">Türkçe</option>
+        </select>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="left">
+          <h1 id="brandTitle">منصّة كرم للتجارة</h1>
+          <div class="subtitle" id="subtitle">لوحة تحكّم تجريبية</div>
+        </div>
+        <div class="right">
+          <button id="trialBtn" class="btn ghost">تجربة 7 أيام</button>
+          <button id="installBtn" class="btn">تثبيت</button>
+        </div>
+      </header>
+
+      <section id="dashboard" class="page">
+        <div class="cards">
+          <div class="card">
+            <div class="card-title" data-i18n="balance">الرصيد التجريبي</div>
+            <div class="card-value" id="balance">1000 $</div>
+          </div>
+          <div class="card">
+            <div class="card-title" data-i18n="profit">الربح/الخسارة</div>
+            <div class="card-value" id="profit">+0.0%</div>
+          </div>
+          <div class="card">
+            <div class="card-title" data-i18n="openOrders">أوامر مفتوحة</div>
+            <div class="card-value" id="orders">0</div>
+          </div>
+        </div>
+
+        <div class="trade-panel">
+          <div class="chart-mock">مخطط تجريبي (Mock)</div>
+          <div class="trade-actions">
+            <select id="asset">
+              <option>BTC/USD</option>
+              <option>ETH/USD</option>
+              <option>EUR/USD</option>
+            </select>
+            <div class="trade-btns">
+              <button class="btn primary" id="buy">شراء</button>
+              <button class="btn ghost" id="sell">بيع</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="log-area">
+          <h4 data-i18n="activity">سجل النشاط</h4>
+          <textarea id="log" readonly>— سجل النشاط سيظهر هنا —</textarea>
+        </div>
+      </section>
+
+      <section id="videos" class="page hidden">
+        <h2 data-i18n="videos">الفيديوهات التعليمية</h2>
+        <div class="grid" id="videosList"></div>
+      </section>
+
+      <section id="indicators" class="page hidden">
+        <h2 data-i18n="indicators">المؤشرات</h2>
+        <div class="grid" id="indList"></div>
+      </section>
+
+      <section id="account" class="page hidden">
+        <h2 data-i18n="account">حسابي</h2>
+        <p id="accountInfo">غير مسجل</p>
+        <button id="openAccount" class="btn">تسجيل / دخول</button>
+      </section>
+
+      <footer class="footer">© <span id="year"></span> Karam Trade Platform</footer>
+    </main>
+  </div>
+
+  <!-- Modal تسجيل / اشتراك -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button id="closeModal" class="modal-close">×</button>
+      <h3 id="modalTitle">تسجيل</h3>
+      <input id="name" placeholder="الاسم" />
+      <input id="email" placeholder="البريد الإلكتروني" />
+      <div class="modal-actions">
+        <button id="saveProfile" class="btn primary">ابدأ التجربة</button>
+        <button id="cancel" class="btn ghost">إلغاء</button>
+      </div>
+      <div id="modalMsg" class="muted"></div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+          </html>
